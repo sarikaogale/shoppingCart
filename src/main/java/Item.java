@@ -35,9 +35,7 @@ public enum Item
     public Double calculateItemPrice(int qty)
     {
         Double itemTotal = 0.0;
-        double discountPrice;
-        double unitPricePerItem;
-        int modVal;
+       
         if(null != getDiscountFactor() && getDiscountFactor() != 0 && null != getDiscountedPrice())
         {
             itemTotal=  ((qty/getDiscountFactor() ) * getDiscountedPrice() ) + ((qty % getDiscountFactor() ) * getUnitPrice() );
